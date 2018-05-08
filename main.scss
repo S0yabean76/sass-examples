@@ -4,18 +4,23 @@ $green: #bada55;
 $black: #000000;
 $white: #ffffff;
 
-$width: 300px;
-$height: 500px;
+$colors: (
+	black: #000000,
+	red: #e84610,
+	green: #bada55
+);
 
-$colorsList: $blue, $red, $green, $black, $white;
+@each $key, $value in $colors {
+    .item-#{$key} {
+        background-color: $value;
+    }
+}
 
 body {
     background-color: $black;
 }
 
 div {
-    width: $width;
-    height: $height;
     border: 1px solid $black;
 }
 
