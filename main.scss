@@ -27,3 +27,9 @@ div {
 h1 {
     color: $white;
 }
+
+$class: container;
+
+div.#{$class}{
+    background-color: orange;
+}
