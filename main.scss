@@ -1,7 +1,24 @@
-@function pxToEm($value, $base) {
-    @return  ($value / $base) +em;
+$blue: #0997d3;
+$red: #e84610;
+$green: #bada55;
+$black: #000000;
+$white: #ffffff;
+
+$width: 300px;
+$height: 500px;
+
+$colorsList: $blue, $red, $green, $black, $white;
+
+body {
+    background-color: $black;
 }
 
-h1{
-    font-size: pxToEm(32, 16);
+div {
+    width: $width;
+    height: $height;
+    border: 1px solid $black;
+}
+
+h1 {
+    color: $white;
 }
