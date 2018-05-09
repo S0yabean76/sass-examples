@@ -1,45 +1,10 @@
-$class-name: item;
+@import "project/helpers/variables";
+@import "project/helpers/helpers";
+@import "project/helpers/mixins";
 
-@for $i from 1 through 4 {
-    .#{$class-name}-#{4i} {
-        width: 60px + $i;
-    }
-}
+@import "project/components/buttons";
+@import "project/components/footer";
+@import "project/components/navigation";
 
-@mixin button($color, $size) {
-    width: $size;
-    height: $size /2;
-    border: 1px solid $color;
-    
-    @if $color == #e84610 {
-        color: #fff;
-    } @else {
-        color: $color;
-    }
-}
-
-@mixin unicornify(){
-    background-color: pink;
-    color: white;
-    @content;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-p {
-    @include unicornify () {
-        border: 1px solid pink;
-        border-radius: 100%;
-        text-align: center;
-    }
-}
-
-.btn {
-    @include button (#e84610, 200px);
-}
-
-h1 {
-    @if 1 + 1 == 2 {
-        border: 1px solid black;
-    }
-}
+@import "project/pages/about";
+@import "project/pages/home";
