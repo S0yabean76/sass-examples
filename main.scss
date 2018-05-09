@@ -1,35 +1,19 @@
-$blue: #0997d3;
-$red: #e84610;
-$green: #bada55;
-$black: #000000;
-$white: #ffffff;
+$class-name: item;
 
-$colors: (
-	black: #000000,
-	red: #e84610,
-	green: #bada55
-);
-
-@each $key, $value in $colors {
-    .item-#{$key} {
-        background-color: $value;
+@for $i from 1 through 4 {
+    .#{$class-name}-#{4i} {
+        width: 60px + $i;
     }
 }
 
-body {
-    background-color: $black;
-}
-
-div {
-    border: 1px solid $black;
-}
+$random: 5;
 
 h1 {
-    color: $white;
-}
-
-$class: container;
-
-div.#{$class}{
-    background-color: orange;
+    @if $random > 5 {
+        color: blue;
+    } @else if $random == 3 {
+        color: purple;
+    } @else {
+        color: orange;
+    }
 }
